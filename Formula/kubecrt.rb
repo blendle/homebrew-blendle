@@ -9,6 +9,12 @@ class Kubecrt < Formula
   depends_on "go" => :build
   depends_on "glide" => :build
 
+  bottle do
+    root_url "https://homebrew-blendle.storage.googleapis.com/"
+    cellar :any_skip_relocation
+    sha256 "df6dcc3e39982b84c53a238f7464e37235952c004226151a59ecd7db308ce6ed" => :sierra
+  end
+
   def install
     ENV["GOPATH"] = buildpath
     ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
