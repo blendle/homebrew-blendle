@@ -8,3 +8,5 @@ Homebrew tap for tools not (yet) submitted to Homebrew Core.
 brew tap blendle/blendle
 brew install ...
 ```
+
+Om Linux machines, install http://linuxbrew.sh first.
