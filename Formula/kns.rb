@@ -1,36 +1,24 @@
 class Kns < Formula
-  desc "kns - kubernetes namespace switcher"
-  homepage "https://gist.github.com/koenbollen/342c138b6a77d3de6869aad68c193617"
-  url "https://gist.github.com/342c138b6a77d3de6869aad68c193617.git",
-    :revision => "0e5b3848c15b8cbae79c92dcb8f1483edeea6953"
-  head "https://gist.github.com/342c138b6a77d3de6869aad68c193617.git"
+  desc "quick Kubernetes Namespace Switcher"
+  homepage "https://github.com/blendle/kns"
+  url "https://github.com/blendle/kns.git", :revision => "c3ad64f9abe2cd9b155e6d4b3b4549395a2213bd"
+  version "c3ad64f9abe2cd9b155e6d4b3b4549395a2213bd"
+  head "https://github.com/blendle/kns.git"
 
   depends_on "fzf"
+  depends_on "kubernetes-cli"
 
   def install
-    prefix.install 'kns.bash'
-  end
-
-  def post_install
-    kns_path = (opt_prefix + 'kns.bash').to_s
-    %w(~/.bash_profile ~/.zshrc).map{|f| Pathname(f).expand_path}.each do |file|
-      next unless file.exist?
-      next if file.readlines.grep(/#{kns_path}/).size > 0
-      file.open('a') do |f|
-        f << "\n[[ -f \"#{kns_path}\" ]] && source \"#{kns_path}\"\n"
-      end
-    end
+    bin.install "./kns"
   end
 
   def caveats; <<-EOS.undent
-    Your ~/.bash_profile or ~/.zshrc had a source-line added to it to make
-    kns available on the command line. It'll still be there after an uninstall.
-
-    Reload you shell using:
-      $ exec $SHELL
-
-    Also, I recommend this alias:
+    I really recommend this alias:
       $ alias k=kubectl
     EOS
+  end
+
+  test do
+    system "which", "kns"
   end
 end
