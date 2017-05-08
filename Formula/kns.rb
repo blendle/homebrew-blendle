@@ -6,7 +6,7 @@ class Kns < Formula
   head "https://github.com/blendle/kns.git"
 
   depends_on "fzf"
-  depends_on "kubernetes-cli"
+  depends_on "kubernetes-cli" => [:optional, "with-kubectl"]
 
   def install
     bin.install "./kns"
