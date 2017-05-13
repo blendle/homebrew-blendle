@@ -2,8 +2,8 @@ class Kubecrt < Formula
   desc "Convert Helm charts to Kubernetes resources."
   homepage "https://github.com/blendle/kubecrt"
   url "https://github.com/blendle/kubecrt.git",
-    :tag => "v0.3.0",
-    :revision => "866332662c1d00ed10adab8b42eefb42f7a17aab"
+    :tag => "v0.5.1",
+    :revision => "a591b237b3621446ac0b383ecb62cddd42315e4c"
   head "https://github.com/blendle/kubecrt.git"
 
   depends_on "go" => :build
@@ -12,7 +12,7 @@ class Kubecrt < Formula
   bottle do
     root_url "https://homebrew-blendle.storage.googleapis.com"
     cellar :any_skip_relocation
-    sha256 "df6dcc3e39982b84c53a238f7464e37235952c004226151a59ecd7db308ce6ed" => :sierra
+    sha256 "9e1da44221d6ce25d8f0c2e88cb633fd1e1da99e75034f631d7e82ea1ea2a337" => :sierra
   end
 
   def install
@@ -21,14 +21,14 @@ class Kubecrt < Formula
     dir = buildpath/"src/github.com/blendle/kubecrt"
     dir.install Dir["*"]
     cd dir do
-      system "glide", "install"
+      system "script/bootstrap"
       system "go", "build", "-o", bin/"kubecrt",
       "-ldflags",
-      "-X github.com/blendle/kubecrt/config.version=#{version} -X github.com/blendle/kubecrt/config.gitrev=8663326"
+      "-X github.com/blendle/kubecrt/config.version=#{version} -X github.com/blendle/kubecrt/config.gitrev=a591b23"
     end
   end
 
   test do
-    system "#{bin}/kubecrt", "--config-docs"
+    system "#{bin}/kubecrt", "--version"
   end
 end
