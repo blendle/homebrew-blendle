@@ -6,7 +6,7 @@ class BnlPlatformCommand < Formula
   version "v.0.1.0"
   head "https://github.com/blendle/bnl-platform-command.git"
 
-  depends_on "blendle/blendle/bnl" # questionable, it works without, but not as good
+  depends_on "blendle/blendle/bnl" => :recommended
   depends_on "kubectl" => :optional
   depends_on "gcloud" => :optional
 
