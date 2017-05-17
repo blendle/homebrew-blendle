@@ -10,10 +10,13 @@ class BnlPlatformCommand < Formula
 
   depends_on "blendle/blendle/bnl" => :recommended
   depends_on "kubectl" => :optional
-  depends_on "gcloud" => :optional
 
   def install
     bin.install "./bnl-platform"
+  end
+
+  def caveats
+    "This command also requires you to have set up gcloud"
   end
 
   test do
