@@ -15,6 +15,18 @@ class Bnl < Formula
     bin.install "./bnl-help"
   end
 
+  def caveats
+    ohai <<-EOS.undent
+      For autocompletion try this:
+
+      zsh:
+      source <(bnl completion zsh)
+
+      bash, fish:
+      Nothing yet :-(
+    EOS
+  end
+
   test do
     system "which", "bnl"
   end
