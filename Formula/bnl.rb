@@ -10,6 +10,9 @@ class Bnl < Formula
 
   def install
     bin.install "./bnl"
+    bin.install "./bnl-commands"
+    bin.install "./bnl-completion"
+    bin.install "./bnl-help"
   end
 
   test do
