@@ -2,7 +2,7 @@ class BnlPlatformCommand < Formula
   desc "Platform related bnl commands"
   homepage "https://github.com/blendle/bnl-platform-command"
   url "https://github.com/blendle/bnl-platform-command.git",
-    :revision => "dd37d3620eed01fa66277680ba6c514b0035a393"
+    :revision => "ddccf75f6980bd36142fecadf04c6d234ff4d560"
   version "v.0.1.0"
   head "https://github.com/blendle/bnl-platform-command.git"
 
