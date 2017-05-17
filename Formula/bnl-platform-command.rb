@@ -11,11 +11,11 @@ class BnlPlatformCommand < Formula
   depends_on "gcloud" => :optional
 
   def install
-    bin.install "./bnl-platform-command"
+    bin.install "./bnl-platform"
   end
 
   test do
-    system "which", "bnl-platform-command"
+    system "which", "bnl-platform"
     system "bnl", "platform"
   end
 end
