@@ -1,10 +1,10 @@
 class BnlPlatformCommand < Formula
   desc "Platform related bnl commands"
   homepage "https://github.com/blendle/bnl-platform-command"
-  url "git://git@github.com:blendle/bnl-platform-command.git",
+  url "https://github.com/blendle/bnl-platform-command.git",
     :revision => "ddccf75f6980bd36142fecadf04c6d234ff4d560"
   version "v0.1.0"
-  head "git://git@github.com:blendle/bnl-platform-command.git"
+  head "https://github.com/blendle/bnl-platform-command.git", using: :git
 
   depends_on "blendle/blendle/bnl" => :recommended
   depends_on "kubectl" => :optional
