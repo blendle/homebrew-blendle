@@ -1,8 +1,8 @@
 class Kns < Formula
   desc "quick Kubernetes Namespace Switcher"
   homepage "https://github.com/blendle/kns"
-  url "https://github.com/blendle/kns.git", :revision => "c3ad64f9abe2cd9b155e6d4b3b4549395a2213bd"
-  version "c3ad64f9abe2cd9b155e6d4b3b4549395a2213bd"
+  url "https://github.com/blendle/kns.git", :revision => "1126226c46004694cb472a73731eafae071d6016"
+  version "1126226c46004694cb472a73731eafae071d6016"
   head "https://github.com/blendle/kns.git"
 
   depends_on "fzf"
