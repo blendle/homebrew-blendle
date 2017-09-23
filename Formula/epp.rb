@@ -8,6 +8,12 @@ class Epp < Formula
     :revision => "225bdbacaf52f2d42f2ceaefded96a8ddd08f8fe"
   head "https://github.com/blendle/epp.git"
 
+  bottle do
+    root_url "https://homebrew-blendle.storage.googleapis.com"
+    cellar :any_skip_relocation
+    sha256 "2c813c110bfd1f19319c9bfbd672fc17b217fddba37d9b5843c5ea3f19232649" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   go_resource "github.com/blendle/epp" do
@@ -29,6 +35,12 @@ class Epp < Formula
     url "https://github.com/blendle/epp.git",
       :tag => "v2.0.0-rc2",
       :revision => "f5da9002496df249035fa4823f7ddae7131658c5"
+
+    bottle do
+      root_url "https://homebrew-blendle.storage.googleapis.com"
+      cellar :any_skip_relocation
+      sha256 "c5c2db44d0ad85d12000180915c282cfc18090e4303a05b51f6e60cfaa349dc4" => :high_sierra
+    end
 
     go_resource "github.com/Masterminds/semver" do
       url "https://github.com/Masterminds/semver.git",
