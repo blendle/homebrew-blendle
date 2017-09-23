@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# script/test: run test suite
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+brew audit ./Formula/*.rb
