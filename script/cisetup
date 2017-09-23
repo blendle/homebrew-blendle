@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# script/cisetup: prepare CI for test run
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+useradd --create-home --shell /bin/sh linuxbrew
+su linuxbrew -c 'echo yes | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"'

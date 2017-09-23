@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# script/citest: run test suite on CI
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+su linuxbrew -c 'export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH; script/test'

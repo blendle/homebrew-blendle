@@ -1,3 +1,3 @@
 happyHackin {
-  image = "linuxbrew/linuxbrew"
+  image = "ruby:2.4"
 }
