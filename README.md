@@ -9,7 +9,7 @@ brew tap blendle/blendle
 brew install ...
 ```
 
-Om Linux machines, install http://linuxbrew.sh first.
+On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 
 ## Bottling a new version
 
