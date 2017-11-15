@@ -1,4 +1,4 @@
-# homebrew-blendle
+# Blendle Homebrew tap
 
 Homebrew tap for tools not (yet) submitted to Homebrew Core.
 
