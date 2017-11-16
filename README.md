@@ -1,5 +1,7 @@
 # Blendle Homebrew tap
 
+[![Build Status](https://travis-ci.org/blendle/homebrew-blendle.svg?branch=master)](https://travis-ci.org/blendle/homebrew-blendle)
+
 Homebrew tap for tools not (yet) submitted to Homebrew Core.
 
 ## Usage
