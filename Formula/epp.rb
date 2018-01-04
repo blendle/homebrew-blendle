@@ -2,14 +2,14 @@ class Epp < Formula
   desc "Small templating engine that allows the use of environmental variables."
   homepage "https://github.com/blendle/epp"
   url "https://github.com/blendle/epp.git",
-    :tag => "v2.0.0",
-    :revision => "8917de94a1146c42f7ebcdee7ba4fcb52d5f9c56"
+    :tag => "v2.1.0",
+    :revision => "4fffc632ad83289cd79c1ed346e73d46f9b39c90"
   head "https://github.com/blendle/epp.git"
 
   bottle do
     root_url "https://homebrew-blendle.storage.googleapis.com"
     cellar :any_skip_relocation
-    sha256 "3c3a050e3d6b21901211a5639a21a471864be3ae945397408adca3fa9806c4e5" => :high_sierra
+    sha256 "5cc68b70e5ac009f03619c8890ea45c4cec81d4553cb01e35fb708dcb9ec1174" => :high_sierra
   end
 
   depends_on "dep" => :build
