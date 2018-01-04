@@ -2,14 +2,14 @@ class Kubecrt < Formula
   desc "Convert Helm charts to Kubernetes resources."
   homepage "https://github.com/blendle/kubecrt"
   url "https://github.com/blendle/kubecrt.git",
-    :tag => "v0.6.1",
-    :revision => "6cd24196f610a98d0d197d8d7cefb250e3cd63a7"
+    :tag => "v0.7.0",
+    :revision => "aa24abaa3d2202838282033171099e4aca8817a2"
   head "https://github.com/blendle/kubecrt.git"
 
   bottle do
     root_url "https://homebrew-blendle.storage.googleapis.com"
     cellar :any_skip_relocation
-    sha256 "8a43e06d80b873d58b9de584997c7a7362a9420fb3c8032c9b7529fd7aff37ec" => :high_sierra
+    sha256 "b2d61f0f75e9bac5a28f955c5cf434e58d3feb2e636049464ecc5f55431fa1d7" => :high_sierra
   end
 
   depends_on "dep" => :build
