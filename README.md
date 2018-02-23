@@ -48,7 +48,7 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * upload the generated `*.tar.gz` file to Google Cloud Storage
 
   ```
-  gsutil -m cp $FORMULA*.bottle.tar.gz gs://homebrew-blendle
+  gsutil -m cp -n $FORMULA*.bottle.tar.gz gs://homebrew-blendle
   ```
 
 * copy the changes of your local formula to this repository:
