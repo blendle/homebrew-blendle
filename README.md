@@ -18,19 +18,20 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * edit the formula as you see fit
 
   ```
-  brew edit Formula/<formula>
+  export FORMULA=<formula>
+  brew edit "Formula/$FORMULA"
   ```
 
 * build a new bottle (binary) of the changes
 
   ```
-  brew install Formula/<formula> --build-bottle
+  brew install "Formula/$FORMULA" --build-bottle
   ```
 
 * tar the bottle, and retrieve the Ruby code required
 
   ```
-  brew bottle Formula/<formula> --root-url=https://homebrew-blendle.storage.googleapis.com
+  brew bottle "Formula/$FORMULA" --root-url=https://homebrew-blendle.storage.googleapis.com
   ```
 
 * copy the returned code back into the formula Ruby file
@@ -46,13 +47,13 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * upload the generated `*.tar.gz` file to Google Cloud Storage
 
   ```
-  gsutil cp *.bottle.tar.gz gs://homebrew-blendle
+  gsutil -m cp $FORMULA*.bottle.tar.gz gs://homebrew-blendle
   ```
 
 * commit the changed file to the Git repository
 
   ```
-  git add Formula/<formula>.rb
+  git add "Formula/$FORMULA.rb"
   git commit
   git push
   ```
