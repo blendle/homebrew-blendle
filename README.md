@@ -25,6 +25,7 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * build a new bottle (binary) of the changes
 
   ```
+  brew uninstall --force "$FORMULA"
   brew install "Formula/$FORMULA" --build-bottle
   ```
 
@@ -48,6 +49,12 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 
   ```
   gsutil -m cp $FORMULA*.bottle.tar.gz gs://homebrew-blendle
+  ```
+
+* copy the changes of your local formula to this repository:
+
+  ```
+  brew cat "Formula/$FORMULA" > "./Formula/$FORMULA.rb"
   ```
 
 * commit the changed file to the Git repository
