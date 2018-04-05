@@ -12,7 +12,7 @@ class Kns < Formula
     bin.install "./kns"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     I really recommend this alias:
       $ alias k=kubectl
     EOS
