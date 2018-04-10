@@ -1,5 +1,5 @@
 class Kns < Formula
-  desc "quick Kubernetes Namespace Switcher"
+  desc "Quick Kubernetes Namespace and Context Switchers"
   homepage "https://github.com/blendle/kns"
   url "https://github.com/blendle/kns.git", :revision => "9e30d8df96dc864383845ea5a12cd460f33166fa"
   version "9e30d8df96dc864383845ea5a12cd460f33166fa"
