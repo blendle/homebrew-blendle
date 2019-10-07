@@ -2,27 +2,21 @@ class Epp < Formula
   desc "Small templating engine that allows the use of environmental variables."
   homepage "https://github.com/blendle/epp"
   url "https://github.com/blendle/epp.git",
-    :tag => "v2.1.0",
-    :revision => "4fffc632ad83289cd79c1ed346e73d46f9b39c90"
+      :tag => "v2.2.0",
+      :revision => "9a543b2ee47994dcd6e0d1021eace0c458acf4f2"
   head "https://github.com/blendle/epp.git"
 
   bottle do
     root_url "https://homebrew-blendle.storage.googleapis.com"
     cellar :any_skip_relocation
-    sha256 "5cc68b70e5ac009f03619c8890ea45c4cec81d4553cb01e35fb708dcb9ec1174" => :high_sierra
+    sha256 "3f1f2cd20a6ede9410103c63c77c7b061d20a90ea87b58137f3d845a228c61d8" => :mojave
   end
 
-  depends_on "dep" => :build
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    buildpath.join("src/github.com/blendle/epp").install buildpath.children
-    cd "src/github.com/blendle/epp" do
-      system "dep", "ensure", "-vendor-only"
-      system "make", "build"
-      bin.install "bin/epp"
-    end
+    system "make", "build"
+    bin.install "bin/epp"
   end
 
   test do
