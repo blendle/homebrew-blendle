@@ -33,6 +33,7 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 
   ```
   brew bottle "Formula/$FORMULA" --root-url=https://homebrew-blendle.storage.googleapis.com
+  # you possibly need to use the option: --force-core-tap
   ```
 
 * copy the returned code back into the formula Ruby file
