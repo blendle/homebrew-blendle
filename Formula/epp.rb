@@ -1,9 +1,9 @@
 class Epp < Formula
-  desc "Small templating engine that allows the use of environmental variables."
+  desc "Small templating engine that allows the use of environmental variables"
   homepage "https://github.com/blendle/epp"
   url "https://github.com/blendle/epp.git",
-    :tag => "v3.1.0",
-    :revision => "b0be2422de871864e9ca3e3d28d5e9edf7b6d399"
+    tag:      "v3.1.0",
+    revision: "b0be2422de871864e9ca3e3d28d5e9edf7b6d399"
   head "https://github.com/blendle/epp.git"
 
   bottle do
