@@ -18,21 +18,21 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * edit the formula as you see fit
 
   ```
-  export FORMULA=<formula>
-  brew edit "Formula/$FORMULA"
+  export FORMULA=<formula>  # e.g.: epp
+  brew edit "Formula/$FORMULA.rb"
   ```
 
 * build a new bottle (binary) of the changes
 
   ```
   brew uninstall --force "$FORMULA"
-  brew install "Formula/$FORMULA" --build-bottle
+  brew install "Formula/$FORMULA.rb" --build-bottle
   ```
 
 * tar the bottle, and retrieve the Ruby code required
 
   ```
-  brew bottle "Formula/$FORMULA" --root-url=https://homebrew-blendle.storage.googleapis.com
+  brew bottle "Formula/$FORMULA.rb" --root-url=https://homebrew-blendle.storage.googleapis.com
   # You possibly need to use the option: --force-core-tap
   ```
 
@@ -49,7 +49,7 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * upload the generated `*.tar.gz` file to Google Cloud Storage
 
   ```
-  # If you used --force-core-tap, you need to rename the generated tar so it uses '-' instead of '--'.
+  # If you used --force-core-tap, you first need to rename the generated tar so it uses '-' instead of '--'.
   # Otherwise brew downloading the bottle will not find the correct file.
   # e.g.: epp--3.1.0.big_sur.bottle.tar.gz to epp-3.1.0.big_sur.bottle.tar.gz
 
@@ -59,7 +59,7 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * copy the changes of your local formula to this repository:
 
   ```
-  brew cat "Formula/$FORMULA" > "./Formula/$FORMULA.rb"
+  brew cat "Formula/$FORMULA.rb" > "./Formula/$FORMULA.rb"
   ```
 
 * commit the changed file to the Git repository
