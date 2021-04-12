@@ -8,8 +8,7 @@ class Epp < Formula
 
   bottle do
     root_url "https://homebrew-blendle.storage.googleapis.com"
-    cellar :any_skip_relocation
-    sha256 "22e59e961b6ad98ad72bd4e6594b488d0dde5debe40793cae8c94c49ccd6a80b" => :big_sur
+    sha256 cellar: :any_skip_relocation, big_sur: "22e59e961b6ad98ad72bd4e6594b488d0dde5debe40793cae8c94c49ccd6a80b"
   end
 
   depends_on "go" => :build
