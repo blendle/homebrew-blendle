@@ -8,8 +8,7 @@ class Kubecrt < Formula
 
   bottle do
     root_url "https://homebrew-blendle.storage.googleapis.com"
-    cellar :any_skip_relocation
-    sha256 "18f2f3a15a9b17c5e12076752e4050a8200db8b9692a1aa3928be5ebad87a4a4" => :high_sierra
+    sha256 cellar: :any_skip_relocation, high_sierra: "18f2f3a15a9b17c5e12076752e4050a8200db8b9692a1aa3928be5ebad87a4a4"
   end
 
   depends_on "dep" => :build
