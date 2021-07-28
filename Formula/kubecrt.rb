@@ -2,8 +2,8 @@ class Kubecrt < Formula
   desc "Convert Helm charts to Kubernetes resources"
   homepage "https://github.com/blendle/kubecrt"
   url "https://github.com/blendle/kubecrt.git",
-    tag:      "v0.9.1",
-    revision: "56be1141b406552ed043c29a87950cd519f7bbc6"
+    tag:      "v0.9.2",
+    revision: "84ecbcfd325597e368cca640b734fcae3232b37d"
   head "https://github.com/blendle/kubecrt.git"
 
   depends_on "go" => :build
