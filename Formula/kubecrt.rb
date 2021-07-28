@@ -8,6 +8,12 @@ class Kubecrt < Formula
 
   depends_on "go" => :build
 
+  bottle do
+    root_url "https://homebrew-blendle.storage.googleapis.com"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur: "9ca36d0e8e9570c64b0dd856057331480288ba49257f87ad3b1a80c670107f4a"
+  end
+
   def install
     ENV["GOPATH"] = buildpath
     buildpath.join("src/github.com/blendle/kubecrt").install buildpath.children
