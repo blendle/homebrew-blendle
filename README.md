@@ -32,7 +32,7 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * tar the bottle, and retrieve the Ruby code required
 
   ```
-  brew bottle "Formula/$FORMULA.rb" --root-url=https://homebrew-blendle.storage.googleapis.com
+  brew bottle $FORMULA --root-url=https://homebrew-blendle.storage.googleapis.com
   # You possibly need to use the option: --force-core-tap
   ```
 
@@ -49,9 +49,11 @@ On Linux, install [Linuxbrew](http://linuxbrew.sh) first.
 * upload the generated `*.tar.gz` file to Google Cloud Storage
 
   ```
-  # If you used --force-core-tap, you first need to rename the generated tar so it uses '-' instead of '--'.
+  # You might first need to rename the generated tar so it uses '-' instead of '--'.
   # Otherwise brew downloading the bottle will not find the correct file.
   # e.g.: epp--3.1.0.big_sur.bottle.tar.gz to epp-3.1.0.big_sur.bottle.tar.gz
+
+  # Seems to be a known problem: https://github.com/Homebrew/brew/pull/4612#commitcomment-29994607
 
   gsutil -m cp -n $FORMULA*.bottle.tar.gz gs://homebrew-blendle
   ```
