@@ -16,7 +16,7 @@ class Bnl < Formula
   end
 
   def caveats
-    ohai <<-EOS.undent
+    ohai <<~EOS
       For autocompletion try this:
 
       zsh:
