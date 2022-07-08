@@ -15,8 +15,7 @@ class Bnl < Formula
     bin.install "./bnl-help"
   end
 
-  def caveats
-    ohai <<~EOS
+  def caveats; <<~EOS
       For autocompletion try this:
 
       zsh:
